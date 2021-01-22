@@ -1,31 +1,31 @@
 function splitDigits(number) {
-  let digitArray = [];
-  let digitString = number.toString();
-  for (let digitIndex = 0, numberLength = digitString.length; digitIndex < numberLength; digitIndex ++) {
-    digitArray.push(+digitString.charAt(digitIndex));
+  const splitDigitArray = [];
+  const digitString = number.toString();
+  for (let digitIndex = 0; digitIndex < digitString.length; digitIndex ++) {
+    splitDigitArray.push(+digitString.charAt(digitIndex));
   }
-  return digitArray
+  return splitDigitArray
 };
 
 function beepBoop(number) {
-  let array2 = [];
-  for (let index = 1; index <= number; index ++) {
-    if (index > 3 && index < 10) {
-      array2.push(index);
+  const robogersArray = [];
+  for (let index = 0; index <= number; index ++) {
+    if (index === 0 || index > 3 && index < 10) {
+      robogersArray.push(index);
     } else {
-      const digitsArray = splitDigits(index);
-      if (digitsArray.includes(3)) {
-        array2.push("Won't you be my neighbor?");
-      } else if (digitsArray.includes(2)) {
-        array2.push("Boop!");
-      } else if (digitsArray.includes(1)) {
-        array2.push("Beep!");
+      const digitArray = splitDigits(index);
+      if (digitArray.includes(3)) {
+        robogersArray.push("Won't you be my neighbor?");
+      } else if (digitArray.includes(2)) {
+        robogersArray.push("Boop!");
+      } else if (digitArray.includes(1)) {
+        robogersArray.push("Beep!");
       } else {
-        array2.push(index);
+        robogersArray.push(index);
       }
     }
   };
-  robogersString = array2.join(" ");
+  robogersString = robogersArray.join(" ");
   return robogersString;
 };
 
