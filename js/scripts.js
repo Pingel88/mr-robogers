@@ -98,16 +98,21 @@ function splitDigits(number) {
 };
 
 function beepBoop(number) {
-  let robogersArray = [];
+  array2 = [];
   for (let index = 1; index <= number; index ++) {
-  const digitArray = splitDigits(index);
-  }
-  // if (index === 1) {
-  //   robogersArray.push("Beep!");
-  // } else {
-  //   robogersArray.push(index);
-  // }
-  // return robogersArray
+    if (index > 1 && index < 10) {
+      array2.push(index);
+    } else {
+      const digitsArray = splitDigits(index);
+      digitsArray.forEach(function(digit) {
+        if (digit === 1) {
+          console.log("potato");
+          array2.push("Beep!");
+        }
+      });
+    }
+  };
+  return array2;
 };
 
-console.log(beepBoop(123));
+console.log(beepBoop(10));
