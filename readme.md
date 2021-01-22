@@ -27,6 +27,9 @@ Expect(beepBoop(0).toEqual([0]);
 Test: "It should return a string with "0" if the number 0 is inputted"
 Expect(beepBoop(0).toEqual("0");
 
+Test: "It should return a string with "1,2,3,4,5,6,7,8,9,10" if the number 10 is inputted"
+Expect(beepBoop(10).toEqual("1,2,3,4,5,6,7,8,9,10");
+
 Test: "It should return a string with "1 2 3 4 5 6 7 8 9 10" if the number 10 is inputted"
 Expect(beepBoop(10).toEqual("1 2 3 4 5 6 7 8 9 10");
 
