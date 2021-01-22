@@ -44,13 +44,26 @@
 // Test: "It should return a string with "1 2 3 4 5 6 7 8 9 10" if the number 10 is inputted"
 // Expect(beepBoop(10).toEqual("1 2 3 4 5 6 7 8 9 10");
 
+// function beepBoop(number) {
+//   let robogersArray = [];
+//   for (let index = 1; index <= number; index ++) {
+//     robogersArray.push(index);
+//   } 
+//   robogersString = robogersArray.toString();
+//   return robogersString.replace(/,/g, " ");
+// };
+
+// console.log("Mr. Robergers says: " + beepBoop(10));
+
+// Test: "It should return an array with [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] if the number 10 is inputted"
+// Expect(beepBoop(10).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
 function beepBoop(number) {
   let robogersArray = [];
   for (let index = 1; index <= number; index ++) {
     robogersArray.push(index);
   } 
-  robogersString = robogersArray.toString();
-  return robogersString.replace(/,/g, " ");
+  return robogersArray
 };
 
-console.log("Mr. Robergers says: " + beepBoop(10));
+console.log(beepBoop(10));
