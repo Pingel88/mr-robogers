@@ -24,20 +24,29 @@ Describe: beepBoop()
 Test: "It should return an array with a 0 if the number 0 is inputted"
 Expect(beepBoop(0).toEqual([0]);
 
-Test: "It should return an array with [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] if the number 10 is inputted"
-Expect(beepBoop(10).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+Test: "It should return an array with [1, 2, 3, 4, 5, 6, 7, 8, 9] if the number 9 is inputted"
+Expect(beepBoop(9).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
 
-Test: "It should return an array with [Beep!, 2, 3, 4, 5, 6, 7, 8, 9, Beep!] if the number 10 is inputted"
-Expect(beepBoop(10).toEqual([Beep!, 2, 3, 4, 5, 6, 7, 8, 9, Beep!]);
+Test: "It should return an array with ["Beep!", 2, 3, 4, 5, 6, 7, 8, 9] if the number 9 is inputted"
+Expect(beepBoop(9).toEqual(["Beep!", 2, 3, 4, 5, 6, 7, 8, 9]);
 
-Test: "It should return an array with [Beep!, Boop!, 3, 4, 5, 6, 7, 8, 9, Beep!] if the number 10 is inputted"
-Expect(beepBoop(10).toEqual([Beep!, Boop!, 3, 4, 5, 6, 7, 8, 9, Beep!]);
+Test: "It should return an array with ["Beep!", 2, 3, 4, 5, 6, 7, 8, 9, "Beep!"] if the number 10 is inputted"
+Expect(beepBoop(10).toEqual(["Beep!", 2, 3, 4, 5, 6, 7, 8, 9, "Beep!"]);
 
-Test: "It should return an array with [Beep!, Boop!, Won't you be my neighbor?, 4, 5, 6, 7, 8, 9, Beep!] if the number 10 is inputted"
-Expect(beepBoop(10).toEqual([Beep!, Boop!, Won't you be my neighbor?, 4, 5, 6, 7, 8, 9, Beep!]);
+Test: "It should return an array with [Beep!, Boop!, 3, 4, 5, 6, 7, 8, 9, "Beep!"] if the number 10 is inputted"
+Expect(beepBoop(10).toEqual([Beep!, Boop!, 3, 4, 5, 6, 7, 8, 9, "Beep!"]);
 
-Test: "It should return an array ending with [Beep!, Boop!, Boop!, Boop!, Won't you be my neighbor?, Boop!] if the number 24 is inputted"
-Expect(beepBoop(24).toEqual([Beep!, Boop!, Boop!, Boop!, Won't you be my neighbor?, Boop!]);
+Test: "It should return an array with [Beep!, 2, 3, 4, 5, 6, 7, 8, 9, "Beep!", "Beep!"] if the number 11 is inputted"
+Expect(beepBoop(11).toEqual([Beep!, 2, 3, 4, 5, 6, 7, 8, 9, "Beep!", "Beep!"]);
+
+Test: "It should return an array starting and ending with ["Beep!", "Boop!", 3, 4, ... "Beep!", "Boop!", "Boop!", "Boop!"] if the number 22 is inputted"
+Expect(beepBoop(22).toEqual(["Beep!", "Boop!", 3, 4, ... "Beep!", "Boop!", "Boop!", "Boop!"]);
+
+Test: "It should return an array starting and ending with ["Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, ... "Boop!", "Won't you be my neighbor?", "Won't you be my neighbor?", "Won't you be my neighbor?", "Won't you be my neighbor?"] if the number 33 is inputted"
+Expect(beepBoop(33).toEqual(["Beep!", "Boop!", "Won't you be my neighbor?", 4, 5, ... "Boop!", "Won't you be my neighbor?", "Won't you be my neighbor?", "Won't you be my neighbor?", "Won't you be my neighbor?"]);
+
+Test: "It should return an array ending with ["Beep!", "Boop!", "Boop!", "Boop!", "Won't you be my neighbor?", "Boop!"] if the number 24 is inputted"
+Expect(beepBoop(24).toEqual(["Beep!", "Boop!", "Boop!", "Boop!", "Won't you be my neighbor?", "Boop!"]);
 
 Test: "It should return a string with "Beep!, Boop!, Won't you be my neighbor?, 4, 5, 6, 7, 8, 9, Beep!" if the number 10 is inputted"
 Expect(beepBoop(10).toEqual("Beep!, Boop!, Won't you be my neighbor?, 4, 5, 6, 7, 8, 9, Beep!");

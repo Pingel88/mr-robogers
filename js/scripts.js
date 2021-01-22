@@ -58,10 +58,27 @@
 // Test: "It should return an array with [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] if the number 10 is inputted"
 // Expect(beepBoop(10).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
+// function beepBoop(number) {
+//   let robogersArray = [];
+//   for (let index = 1; index <= number; index ++) {
+//     robogersArray.push(index);
+//   } 
+//   return robogersArray
+// };
+
+// console.log(beepBoop(10));
+
+// Test: "It should return an array with [Beep!, 2, 3, 4, 5, 6, 7, 8, 9] if the number 9 is inputted"
+// Expect(beepBoop(10).toEqual([Beep!, 2, 3, 4, 5, 6, 7, 8, 9]);
+
 function beepBoop(number) {
   let robogersArray = [];
   for (let index = 1; index <= number; index ++) {
-    robogersArray.push(index);
+    if (index === 1) {
+      robogersArray.push("Beep!");
+    } else {
+      robogersArray.push(index);
+    }
   } 
   return robogersArray
 };
