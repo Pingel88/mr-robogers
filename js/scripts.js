@@ -88,6 +88,38 @@
 // Test: "It should return an array with [Beep!, Boop!, 3, 4, 5, 6, 7, 8, 9, "Beep!"] if the number 10 is inputted"
 // Expect(beepBoop(10).toEqual([Beep!, Boop!, 3, 4, 5, 6, 7, 8, 9, "Beep!"]);
 
+// function splitDigits(number) {
+//   let digitArray = [];
+//   let digitString = number.toString();
+//   for (let digitIndex = 0, numberLength = digitString.length; digitIndex < numberLength; digitIndex ++) {
+//     digitArray.push(+digitString.charAt(digitIndex));
+//   }
+//   return digitArray
+// };
+
+// function beepBoop(number) {
+//   array2 = [];
+//   for (let index = 1; index <= number; index ++) {
+//     if (index > 1 && index < 10) {
+//       array2.push(index);
+//     } else {
+//       const digitsArray = splitDigits(index);
+//       digitsArray.forEach(function(digit) {
+//         if (digit === 1) {
+//           console.log("potato");
+//           array2.push("Beep!");
+//         }
+//       });
+//     }
+//   };
+//   return array2;
+// };
+
+// console.log(beepBoop(10));
+
+// Test: "It should return an array with [Beep!, 2, 3, 4, 5, 6, 7, 8, 9, "Beep!", "Beep!"] if the number 11 is inputted"
+// Expect(beepBoop(11).toEqual([Beep!, 2, 3, 4, 5, 6, 7, 8, 9, "Beep!", "Beep!"]);
+
 function splitDigits(number) {
   let digitArray = [];
   let digitString = number.toString();
@@ -104,15 +136,14 @@ function beepBoop(number) {
       array2.push(index);
     } else {
       const digitsArray = splitDigits(index);
-      digitsArray.forEach(function(digit) {
-        if (digit === 1) {
-          console.log("potato");
-          array2.push("Beep!");
-        }
-      });
+      if (digitsArray.includes(1)) {
+        array2.push("Beep!");
+      } else {
+        array2.push(index);
+      }
     }
   };
   return array2;
 };
 
-console.log(beepBoop(10));
+console.log(beepBoop(11));
