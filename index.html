@@ -9,6 +9,10 @@
 </head>
 <body>
   <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Welcome to Mr. Robogers' Neighborhood</h1>
+      <p class="lead">Enter a number below and Mr. Robogers will help you count up to it!</p>
+    </div>
     <form id="robogers">
       <div class="form-group">
         <label for="robogers-input">Enter a number:</label>
@@ -16,7 +20,13 @@
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-    <p id="robogers-output"></p>
+    <div class="robogers-speaks">
+      <h2>Welcome to my boop!</h2>
+      <img src="img/mr-robogers.gif" alt="A gif of Mr. Roborogers from Adult Swim" class="img-width">
+      <button onclick="reverseOrder()" class="btn btn-outline-primary reverse-button mt-5">Reverse Order</button>
+      <p id="robogers-output" class="mt-3"></p>
+      <p id="robogers-output-reversed" class="mt-3"></p>
+    </div>
   </div>
 </body>
 </html>

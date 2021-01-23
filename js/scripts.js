@@ -25,7 +25,8 @@ function beepBoop(number) {
       }
     }
   };
-  robogersString = robogersArray.join(" ");
+  globalArray = robogersArray;
+  const robogersString = robogersArray.join(" ");
   return robogersString;
 };
 
@@ -33,6 +34,20 @@ $(document).ready(function() {
   $("form#robogers").submit(function(event) {
     robogersSays = beepBoop($("input#robogers-input").val());
     $("#robogers-output").text(robogersSays);
+    robogersSpeaks();
     event.preventDefault();
   });
 });
+
+function reverseOrder() {
+  const reversedRobogersArray = globalArray.reverse();
+  const reversedRobogersString = reversedRobogersArray.join(" ");
+  $("#robogers-output-reversed").text(reversedRobogersString);
+  $("#robogers-output").hide();
+  $("#robogers-output-reversed").show();
+}
+
+function robogersSpeaks() {
+  $(".robogers-speaks").show();
+  $(".jumbotron").hide();
+}

@@ -54,7 +54,8 @@ Code: $("form#robogers-input").submit(function(event) {
       };
 Expect: Empty <p> element to be pogipulated with Mr. Robogers' counting.
 ```
-
+## Known bug
+* After reversing the order, the user will have to press the reverse button again if they were to submit a new number.
 ## Contact Information
 #### Mike Pingel mdpingel@gmail.com
 ## Copyright & License Information

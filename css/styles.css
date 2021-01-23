@@ -1,0 +1,23 @@
+body {
+  text-align: center;
+  margin: auto;
+}
+
+#robogers-input {
+  width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+.robogers-speaks {
+  display: none;
+}
+
+.reverse-button {
+  display: block;
+  margin: auto;
+}
+
+#robogers-output-reversed {
+  display: none;
+}
