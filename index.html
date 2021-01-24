@@ -16,16 +16,24 @@
     <form id="robogers">
       <div class="form-group">
         <label for="robogers-input">Enter a number:</label>
-        <input type="text" class="form-control" id="robogers-input">
+        <input type="text" class="form-control" id="robogers-input" required>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <div class="form-group">
+        <label for="user-name">Enter your name:</label>
+        <input type="text" class="form-control" id="user-name" required>
+      </div>
+      <button type="submit" class="btn btn-primary"><span id="before-submit">Submit</span><span id="after-submit">Submit Forward</span></button>
     </form>
-    <div class="robogers-speaks">
+    <div id="robogers-speaks">
       <h2>Welcome to my boop!</h2>
       <img src="img/mr-robogers.gif" alt="A gif of Mr. Roborogers from Adult Swim" class="img-width">
-      <button onclick="reverseOrder()" class="btn btn-outline-primary reverse-button mt-5">Reverse Order</button>
+      <button onclick="reverseOrder()" class="btn btn-outline-primary reverse-button mt-5">Submit Reversed</button>
       <p id="robogers-output" class="mt-3"></p>
       <p id="robogers-output-reversed" class="mt-3"></p>
+    </div>
+    <div id="terminator-error">
+      <h2><span id="user-error"></span>, ENTER A WHOLE NUMBER 0 OR ABOVE OR BE TERMINATED</h2>
+      <img src="img/terminator.gif" alt="A gif of a Terminator unit from Terminator 2" class="img-width">
     </div>
   </div>
 </body>

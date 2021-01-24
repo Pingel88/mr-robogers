@@ -3,21 +3,17 @@ body {
   margin: auto;
 }
 
-#robogers-input {
+#robogers-input, #user-name {
   width: 500px;
   margin: auto;
   text-align: center;
 }
 
-.robogers-speaks {
+#robogers-speaks, #terminator-error, #robogers-output-reversed, #after-submit{
   display: none;
 }
 
 .reverse-button {
   display: block;
   margin: auto;
-}
-
-#robogers-output-reversed {
-  display: none;
 }
