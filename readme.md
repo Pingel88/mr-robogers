@@ -4,6 +4,7 @@
 ## Technologies Used
 * _HTML_
 * _CSS_
+* _Bootstrap_
 * _Javascript_
 * _jQuery_
 * _GitHub_
@@ -52,10 +53,8 @@ Test: "It should return Mr. Robogers' result when a number is submitted in a fie
 Code: $("form#robogers-input").submit(function(event) {
          $("#robogers-output").text(beepBoop($("input#robogers-input").val());
       };
-Expect: Empty <p> element to be pogipulated with Mr. Robogers' counting.
+Expect: Empty <p> element to be populated with Mr. Robogers' counting.
 ```
-## Known bug
-* After reversing the order, the user will have to press the reverse button again if they were to submit a new number.
 ## Contact Information
 #### Mike Pingel mdpingel@gmail.com
 ## Copyright & License Information

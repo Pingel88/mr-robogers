@@ -45,9 +45,11 @@ function reverseOrder() {
   $("#robogers-output-reversed").text(reversedRobogersString);
   $("#robogers-output").hide();
   $("#robogers-output-reversed").show();
-}
+};
 
 function robogersSpeaks() {
   $(".robogers-speaks").show();
+  $("#robogers-output").show();
+  $("#robogers-output-reversed").hide();
   $(".jumbotron").hide();
-}
+};
