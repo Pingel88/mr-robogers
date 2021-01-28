@@ -43,6 +43,9 @@ $(document).ready(function() {
       terminatorShow();
     }
   });
+  $(".reverse-button").click(function() {
+    reverseOrder();
+  });
 });
 
 function reverseOrder() {
@@ -50,7 +53,7 @@ function reverseOrder() {
   const userNameInput = $("input#user-name").val();
   if (robogersInput >= 0 && robogersInput % 1 === 0) {
     const robogersArray = beepBoop(robogersInput, userNameInput);
-    reversedRobogersArray = robogersArray.reverse();
+    const reversedRobogersArray = robogersArray.reverse();
     const reversedRobogersString = reversedRobogersArray.join(" ");
     $("#robogers-output-reversed").text(reversedRobogersString);
     showReverseOrder();
